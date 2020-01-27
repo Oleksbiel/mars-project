@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '10'
+
+before_install:
+- npm install -g @angular/cli
+install: npm install
+
+branches:
+  only:
+  - master
+
+
+deploy:
+  provider: heroku
+  app: mars-space
+  api_key:
+    secure: "4313f14e-df79-4d66-b7b3-1d11131f447b"
